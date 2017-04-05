@@ -42,3 +42,4 @@ before_script:
 script:
   - ./gradlew checkFlowDebug --continue --stacktrace
   - ./gradlew connectedFlowDebugAndroidTest --continue --stacktrace
+
