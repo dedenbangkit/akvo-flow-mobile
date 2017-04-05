@@ -39,6 +39,6 @@ before_script:
     - adb shell input keyevent 82 &
 
 script:
-  - ./gradlew checkFlowDebug --continue --stacktrace
+  - ./gradlew lintFlowDebug checkstyle testFlowDebug --continue --stacktrace
   - ./gradlew connectedFlowDebugAndroidTest --continue --stacktrace
 
