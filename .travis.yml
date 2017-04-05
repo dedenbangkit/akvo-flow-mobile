@@ -1,11 +1,23 @@
 language: android
-sudo: required
 env:
   global:
     - ADB_INSTALL_TIMEOUT=8 # 8 minutes (2 minutes by default)
 
 jdk:
   - oraclejdk8
+
+before_cache:
+  - rm -f  $HOME/.gradle/caches/modules-2/modules-2.lock
+  - rm -fr $HOME/.gradle/caches/*/plugin-resolution/
+
+cache:
+  directories:
+    - $HOME/.gradle/wrapper
+    - $HOME/.gradle/native
+    - $HOME/.gradle/daemon
+#    - $HOME/.gradle/caches/jars-1
+#    - $HOME/.gradle/caches/2.14.1
+    - $HOME/.android/build-cache
 
 android:
   components:
