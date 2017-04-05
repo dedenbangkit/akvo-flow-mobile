@@ -10,6 +10,7 @@ jdk:
 before_cache:
   - rm -f  $HOME/.gradle/caches/modules-2/modules-2.lock
   - rm -fr $HOME/.gradle/caches/*/plugin-resolution/
+
 cache:
   directories:
     - $HOME/.gradle/caches/
@@ -39,5 +40,5 @@ before_script:
     - adb shell input keyevent 82 &
 
 script:
-  - ./gradlew check --continue --stacktrace
+  - ./gradlew checkFlowDebug --continue --stacktrace
   - ./gradlew connectedFlowDebugAndroidTest --continue --stacktrace
