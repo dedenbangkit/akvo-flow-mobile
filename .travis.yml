@@ -7,15 +7,6 @@ env:
 jdk:
   - oraclejdk8
 
-cache:
-  directories:
-    - $HOME/.gradle/wrapper
-    - $HOME/.gradle/native
-    - $HOME/.gradle/daemon
-#    - $HOME/.gradle/caches/jars-1
-#    - $HOME/.gradle/caches/2.14.1
-    - $HOME/.android/build-cache
-
 android:
   components:
     - tools
