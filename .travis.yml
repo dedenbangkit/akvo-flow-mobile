@@ -41,4 +41,3 @@ before_script:
 script:
   - ./gradlew lintFlowDebug checkstyle testFlowDebug --continue --stacktrace
   - ./gradlew connectedFlowDebugAndroidTest --continue --stacktrace
-
